@@ -25,6 +25,7 @@ namespace NonTutCuf
             Exiled.Events.Handlers.Player.Handcuffing += HandCuffs;
             base.OnEnabled();
         }
+
         public override void OnDisabled()
         {
             Exiled.Events.Handlers.Player.Handcuffing -= HandCuffs;
@@ -32,10 +33,8 @@ namespace NonTutCuf
         }
         private void HandCuffs(HandcuffingEventArgs ev)
         {
-            if (Global.Player_Role.ContainsKey("035"))
+            if (ev.Target.Role == RoleTypeId.Tutorial)
             {
-                if (Global.Player_Role["035"] != ev.Target)
-                {
                     ev.IsAllowed = false;
                     Timing.CallDelayed(0.02f, () =>
                     {
@@ -43,52 +42,12 @@ namespace NonTutCuf
                     });
 
                     ev.Target.RemoveHandcuffs();
-                    ev.Player.Handcuff();
-                    ev.Player.DropItems();
 
-                    Timing.CallDelayed(2f, () =>
-                    {
-                        ev.Player.RemoveHandcuffs();
-                    });
-                }
-            }
-            else
-            {
-                ev.IsAllowed = false;
-                Timing.CallDelayed(0.02f, () =>
-                {
-                    ev.IsAllowed = true;
-                });
-
-                ev.Target.RemoveHandcuffs();
-                ev.Player.Handcuff();
-                ev.Player.DropItems();
-
-                Timing.CallDelayed(2f, () =>
-                {
-                    ev.Player.RemoveHandcuffs();
-                });
-            }
-            if (Global.Player_Role["343"] != ev.Target)
-            {
-                if (Global.Player_Role["343"] != ev.Target)
-                {
-                    ev.IsAllowed = false;
                     Timing.CallDelayed(0.02f, () =>
                     {
-                        ev.IsAllowed = true;
-                    });
-
-                    ev.Target.RemoveHandcuffs();
-                    ev.Player.Handcuff();
-                    ev.Player.DropItems();
-
-                    Timing.CallDelayed(2f, () =>
-                    {
                         ev.Player.RemoveHandcuffs();
                     });
                 }
-            }
         }
     }
 }

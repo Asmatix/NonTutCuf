@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35617.110 d17.13
+VisualStudioVersion = 17.13.35617.110
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lessons", "Lessons.csproj", "{7D9F43A1-16D1-4CE8-8CC6-CAEF88ECEF7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NonTutCuf", "NonTutCuf.csproj", "{7D9F43A1-16D1-4CE8-8CC6-CAEF88ECEF7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
