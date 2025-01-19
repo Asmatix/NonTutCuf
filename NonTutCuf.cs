@@ -35,12 +35,7 @@ namespace NonTutCuf
         {
             if (ev.Target.Role == RoleTypeId.Tutorial)
             {
-                    ev.IsAllowed = false;
-                    Timing.CallDelayed(0.02f, () =>
-                    {
-                        ev.IsAllowed = true;
-                    });
-
+                    ev.IsAllowed = true;
                     ev.Target.RemoveHandcuffs();
             }
         }
