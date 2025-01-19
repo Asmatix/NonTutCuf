@@ -35,8 +35,7 @@ namespace NonTutCuf
         {
             if (ev.Target.Role == RoleTypeId.Tutorial)
             {
-                    ev.IsAllowed = true;
-                    ev.Target.RemoveHandcuffs();
+                    ev.IsAllowed = false;
             }
         }
     }
