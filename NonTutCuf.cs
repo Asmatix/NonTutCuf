@@ -42,12 +42,7 @@ namespace NonTutCuf
                     });
 
                     ev.Target.RemoveHandcuffs();
-
-                    Timing.CallDelayed(0.02f, () =>
-                    {
-                        ev.Player.RemoveHandcuffs();
-                    });
-                }
+            }
         }
     }
 }
