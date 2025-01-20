@@ -35,7 +35,8 @@ namespace NonTutCuf
         {
             if (ev.Target.Role == RoleTypeId.Tutorial)
             {
-                    ev.IsAllowed = false;
+                ev.IsAllowed = false;
+                Log.Info("Попытка связать обучение не удалась!");
             }
         }
     }
